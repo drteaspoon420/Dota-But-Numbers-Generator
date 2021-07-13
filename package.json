@@ -1,5 +1,17 @@
 {
+  "name": "dota-but-numbers-generator",
+  "version": "1.0.0",
+  "description": "Easily generate KV files with modified numbers.",
+  "private": true,
+  "main": "src/main.js",
   "dependencies": {
+    "lodash.merge": "^4.6.2",
     "valve-kv": "^1.2.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "",
+  "license": "MIT"
 }
