@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "valve-kv": "^1.2.0"
+  }
+}
