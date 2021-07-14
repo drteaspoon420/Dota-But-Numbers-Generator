@@ -19,7 +19,6 @@ function processFile(
         [dataKey]: {}
     }
     for (const key in data[dataKey]) {
-        if(key === 'special_bonus_undefined') { break; }
         if (Object.hasOwnProperty.call(data[dataKey], key)) {
             if (shouldProcessKey(key)) {
                 const element = data[dataKey][key];
