@@ -29,15 +29,15 @@ function and(filterA, filterB)
 {
     return function(key)
     {
-        return filterA(key) && filterB(key);
+        return filterA(key, depth) && filterB(key, depth);
     }
 }
 
 function or(filterA, filterB)
 {
-    return function(key)
+    return function(key, depth)
     {
-        return filterA(key) || filterB(key);
+        return filterA(key, depth) || filterB(key, depth);
     }
 }
 
