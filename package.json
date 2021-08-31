@@ -6,6 +6,7 @@
   "main": "src/main.js",
   "dependencies": {
     "lodash.merge": "^4.6.2",
+    "n-readlines": "^1.0.1",
     "valve-kv": "^1.2.0"
   },
   "devDependencies": {},
