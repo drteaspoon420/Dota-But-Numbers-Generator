@@ -28,7 +28,7 @@ rmdir /S /Q C:\temp\dota2buttemplate_fixed-master
 del C:\temp\template.zip
 
 echo Generating KV files..
-npm install
+call npm install
 node src\main.js
 
 echo Copying KV files..
