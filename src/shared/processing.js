@@ -30,6 +30,8 @@ function processFile(
                     shouldProcessField,
                     scalingFunction, 
                     0,
+                    element,
+                    key,
                     extrapolateToLevel,
                 );
                 
@@ -50,6 +52,8 @@ function replace(
     shouldProcessField,
     scalingFunction, 
     depth,
+    dataObject,
+    dataKey,
     extrapolateToLevel = 0,
 ) 
 {
@@ -76,6 +80,8 @@ function replace(
                         scaling, 
                         i, 
                         parentKey,
+                        dataObject,
+                        dataKey,
                     );
                 }
             }
@@ -98,6 +104,8 @@ function replace(
                     shouldProcessField, 
                     scalingFunction, 
                     depth + 1,
+                    dataObject,
+                    dataKey,
                     extrapolateToLevel,
                 );
             }

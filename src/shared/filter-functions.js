@@ -9,6 +9,14 @@ function wildcheck(key) {
     return false;
 }
 
+function blacklistSubstring(substring)
+{
+    return function(key)
+    {
+        return key.indexOf(substring) < 0;
+    }
+}
+
 function whitelist(whitelist)
 {
     return function(key)
