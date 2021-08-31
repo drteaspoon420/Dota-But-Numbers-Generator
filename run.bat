@@ -10,6 +10,7 @@ FOR /F "tokens=* USEBACKQ" %%F IN (`node src\main.js dota-path`) DO (
 SET dotaPath="%%F"
 )
 echo Downloading template..
+mkdir C:\temp
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://github.com/Snoresville/dota2buttemplate_fixed/archive/refs/heads/master.zip', 'C:\temp\template.zip')"
 
 echo Extracting template..
@@ -29,6 +30,7 @@ del C:\temp\template.zip
 
 echo Generating KV files..
 call npm install
+mkdir output
 node src\main.js
 
 echo Copying KV files..
