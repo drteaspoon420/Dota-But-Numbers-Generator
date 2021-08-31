@@ -36,6 +36,14 @@ switch(command)
     }
     case 'generate':
     {
+        let outputPath = path.join(__filename, '../../output');
+        fs.readdirSync(outputPath)
+            .forEach(x => 
+                {
+                    fs.unlinkSync(path.join(outputPath, x));
+                });
+        
+
         if(settings.generate.items || settings.generate.abilities)
         {
             fs.writeFile(
