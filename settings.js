@@ -3,7 +3,7 @@ const filters = require('./src/shared/filter-functions');
 
 const settings = () => {
     return {
-        name: 'dota2_but_<name>',
+        name: 'dota2_but_<name>', // avoid spaces but use _ instead
         targetDirectory: 'C:\\Users\\<User>\\Documents\\Projects\\Dota2Buts',
         dotaPath: 'C:\\Program Files (x86)\\Steam\\SteamApps\\common\\dota\ 2\ beta',
         generate: 
