@@ -34,7 +34,7 @@ mkdir output
 node src\main.js
 
 echo Copying KV files..
-copy %~dp0output\* %dotaPath%\game\dota_addons\%name%\scripts\npc /Y
+copy "%~dp0output\*" %dotaPath%\game\dota_addons\%name%\scripts\npc /Y
 
 echo Setting up links..
 mklink /J %targetDirectory%\%name%\game %dotaPath%\game\dota_addons\%name%
