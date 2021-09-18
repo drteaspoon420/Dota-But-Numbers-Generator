@@ -16,6 +16,7 @@ const settings = () => {
         units:
         {
             dataTransformationFunction: transformations.times(10),
+            // dataTransformationFunction: unitsTransformationFunction,
             shouldProcessKey: filters.blacklist(unitsKeyBlacklist),
             shouldProcessField: filters.whitelist(unitsFieldWhitelist),
             additionalTransformation: transformations.noop,
@@ -23,13 +24,15 @@ const settings = () => {
         heroes:
         {
             dataTransformationFunction: transformations.times(10),
+            // dataTransformationFunction: heroesTransformationFunction,
             shouldProcessKey: filters.blacklist(heroesKeyBlacklist),
             shouldProcessField: filters.whitelist(heroesFieldWhitelist),
             additionalTransformation: transformations.noop,
         },
         items:
         {
-            dataTransformationFunction: itemTransformationFunction,
+            dataTransformationFunction: transformations.times(10),
+            // dataTransformationFunction: itemTransformationFunction,
             shouldProcessKey: filters.blacklist(itemsBlacklist),
             shouldProcessField: filters.blacklist(itemsBlacklist),
             additionalTransformation: transformations.noop,
@@ -38,7 +41,8 @@ const settings = () => {
         },
         abilities:
         {
-            dataTransformationFunction: abilityTransformationFunction,
+            dataTransformationFunction: transformations.times(10),
+            // dataTransformationFunction: abilityTransformationFunction,
             shouldProcessKey: filters.blacklist(abilityBlacklist),
             shouldProcessField: filters.blacklist(abilityBlacklist),
             additionalTransformation: transformations.noop,
