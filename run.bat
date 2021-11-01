@@ -23,6 +23,11 @@ mkdir %dotaPath%\game\dota_addons\%name%
 mkdir %dotaPath%\content\dota_addons\%name%
 robocopy C:\temp\dota2buttemplate_fixed-master\game\dota_addons\addon_template_butt %dotaPath%\game\dota_addons\%name% /E /IS /MOVE
 robocopy C:\temp\dota2buttemplate_fixed-master\content\dota_addons\addon_template_butt %dotaPath%\content\dota_addons\%name% /E /IS /MOVE
+mkdir .\input
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/pak01_dir/scripts/npc/items.txt', '.\input\items.txt')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/scripts/npc/npc_abilities.txt', '.\input\npc_abilities.txt')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/scripts/npc/npc_heroes.txt', '.\input\npc_heroes.txt')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/SteamDatabase/GameTracking-Dota2/master/game/dota/scripts/npc/npc_units.txt', '.\input\npc_units.txt')"
 copy C:\temp\dota2buttemplate_fixed-master\.gitignore %targetDirectory%\%name%
 copy C:\temp\dota2buttemplate_fixed-master\README.md %targetDirectory%\%name%
 rmdir /S /Q C:\temp\dota2buttemplate_fixed-master
