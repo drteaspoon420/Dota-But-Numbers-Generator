@@ -62,7 +62,7 @@ The function just needs to return any number for the new KV value. You can used 
 | Argument | Description                                                       |
 |----------|-------------------------------------------------------------------|
 | current  | The original KV value                                             |
-| scaling  | This is only used for interpolation (see [skill interpolation]()) |
+| scaling  | The default scaling of value per level                            |
 | level    | The level of an ability                                           |
 | key      | The key of the KV value                                           |
 
